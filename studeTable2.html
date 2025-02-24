@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Student Profile</h2>
+        <p><strong>Name:</strong> <span id="profileName"></span></p>
+        <p><strong>Address:</strong> <span id="profileAddress"></span></p>
+        <p><strong>Phone:</strong> <span id="profilePhone"></span></p>
+        <p><strong>Profile Link:</strong> <a id="profileLink" href="#" target="_blank">Visit Profile</a></p>
+        <a href="index.html">Go Back</a>
+    </div>
+
+    <script>
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        document.getElementById("profileName").textContent = getQueryParam("name");
+        document.getElementById("profileAddress").textContent = getQueryParam("address");
+        document.getElementById("profilePhone").textContent = getQueryParam("phone");
+        document.getElementById("profileLink").href = getQueryParam("profile");
+    </script>
+
+</body>
+</html>

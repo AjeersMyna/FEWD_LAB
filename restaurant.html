@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoke and Spicy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, red, orange);
+            position: relative;
+        }
+        
+        #main-heading {
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px gray;
+            padding: 20px;
+            color: white;
+        }
+        
+        .nav-menu {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        
+        .nav-menu a:hover {
+            color: #f4a261;
+        }
+        
+        .specialties {
+            margin: 20px;
+            padding: 10px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .specialties ol {
+            list-style-type: upper-roman;
+        }
+        
+        .menu-table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .menu-table th, .menu-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        .menu-table th {
+            background-color: #f4a261;
+            color: white;
+        }
+        
+        .menu-item:hover {
+            background-color: #f4f4f4;
+        }
+        
+        /* Smoke Effect */
+        @keyframes smoke {
+            0% { opacity: 0.1; transform: translateY(10px); }
+            50% { opacity: 0.3; transform: translateY(-10px); }
+            100% { opacity: 0.1; transform: translateY(10px); }
+        }
+        
+        .smoke {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            filter: blur(20px);
+            animation: smoke 4s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="smoke"></div>
+    <h1 id="main-heading">Smoke and Spicy</h1>
+    
+    <div class="nav-menu">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact" target="_blank">Contact Us</a>
+    </div>
+    
+    <section class="specialties">
+        <h2>Our Specialties</h2>
+        <ol>
+            <li>Italian Cuisine</li>
+            <li>Indian Spices</li>
+            <li>Chinese Delicacies</li>
+            <li>Mexican Tacos</li>
+            <li>French Pastries</li>
+        </ol>
+    </section>
+    
+    <table class="menu-table">
+        <tr>
+            <th>Dish Name</th>
+            <th>Price</th>
+            <th>Description</th>
+        </tr>
+        <tr class="menu-item">
+            <td>Margherita Pizza</td>
+            <td>$12</td>
+            <td>Classic pizza with fresh mozzarella and basil</td>
+        </tr>
+        <tr class="menu-item">
+            <td>Butter Chicken</td>
+            <td>$15</td>
+            <td>Rich and creamy Indian curry with tender chicken</td>
+        </tr>
+        <tr class="menu-item">
+            <td>Kung Pao Chicken</td>
+            <td>$14</td>
+            <td>Spicy and tangy chicken stir-fry with peanuts</td>
+        </tr>
+    </table>
+</body>
+</html>

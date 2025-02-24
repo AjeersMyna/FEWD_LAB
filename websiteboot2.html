@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Quality Leads Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1da1f2;
+            --dark-bg: #1a1a1a;
+            --text-muted: #888;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .wave-shape {
+            position: relative;
+            background-color: var(--dark-bg);
+        }
+
+        .wave-shape::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: #fff !important;
+        }
+
+        .hero-section {
+            background-color: var(--dark-bg);
+            color: #fff;
+            position: relative;
+            padding-bottom: 100px;
+        }
+
+        .big-w {
+            color: var(--primary-color);
+            font-size: 4rem;
+            font-weight: bold;
+            line-height: 0.8;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .hero-text {
+            color: var(--text-muted);
+            margin: 1.5rem 0;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 10px 30px;
+        }
+
+        .btn-primary:hover {
+            background-color: #1991db;
+            border-color: #1991db;
+        }
+
+        .service-card {
+            text-align: center;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1.5rem;
+        }
+
+        .steps-section {
+            background-color: var(--dark-bg);
+            color: #fff;
+        }
+
+        .testimonial-card {
+            background: var(--dark-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            color: #fff;
+            height: 100%;
+        }
+
+        .testimonial-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .blog-card {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .blog-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .contact-section {
+            background-color: var(--dark-bg);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section wave-shape">
+        <nav class="navbar navbar-expand-lg py-3">
+            <div class="container">
+                <a class="navbar-brand" href="#">SGC</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="mb-4">
+                        <span class="big-w">W</span>
+                        <span class="hero-title">e Collect High<br>Quality Leads</span>
+                    </h1>
+                    <p class="hero-text">
+                        Transform your business with our lead generation expertise. We help you connect with high-quality prospects that convert into valuable customers.
+                    </p>
+                    <button class="btn btn-primary">Contact Us</button>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXYyNDFsdnk4ZHU2YWdhbDlkZ2s3NW94NWhoeDd5OHN1bThmZzJ3cSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/9JrkkDoJuU0FbdbUZU/giphy.gif" 
+                         alt="Business Analytics Animation" 
+                         class="img-fluid"
+                         loading="lazy"
+                         style="background: transparent;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">What We Will Do For Your Business</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <img src="https://media.giphy.com/media/KGhpQ5NMoWKQurlHwI/giphy.gif?cid=790b7611bl2yuktz5fer6igb4mqzlehcsakktajrilecu8yk&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Service 1" class="service-icon">
+                        <h3>Lead Generation</h3>
+                        <p>We identify and attract potential customers interested in your products or services.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <img src="https://media.giphy.com/media/KGhpQ5NMoWKQurlHwI/giphy.gif?cid=790b7611bl2yuktz5fer6igb4mqzlehcsakktajrilecu8yk&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Service 2" class="service-icon">
+                        <h3>Market Analysis</h3>
+                        <p>Deep dive into market trends and competitor analysis to position your business effectively.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <img src="https://media.giphy.com/media/KGhpQ5NMoWKQurlHwI/giphy.gif?cid=790b7611bl2yuktz5fer6igb4mqzlehcsakktajrilecu8yk&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Service 3" class="service-icon">
+                        <h3>Strategy Development</h3>
+                        <p>Custom strategies to reach your target audience and achieve business goals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section class="steps-section wave-shape">
+        <div class="container">
+            <h2 class="text-center mb-5">Steps To Build A Successful Digital Product</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://media.giphy.com/media/3o752kioggAfpo4i76/giphy.gif?cid=790b76110tx4w3osk3in79bschqrrxgoosdsicf5kguepkz5&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Phone Mockup" class="img-fluid">
+                </div>
+                <div class="col-lg-6">
+                    <div class="steps-content">
+                        <div class="mb-4">
+                            <h4>1. Research & Planning</h4>
+                            <p>Comprehensive market research and strategic planning for your digital product.</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4>2. Design & Development</h4>
+                            <p>Creating user-friendly interfaces and robust functionality.</p>
+                        </div>
+                        <div>
+                            <h4>3. Launch & Optimization</h4>
+                            <p>Successful product launch and continuous improvement based on user feedback.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Generation Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Generating New Customers Via Online More</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center gap-4">
+                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGc2YndqZm9ncG1qdXN2ZDVjaWJydmlhendzb2FqaWw0amszc29xbyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/vJJWnBdIIRrOJRE7Pb/giphy.gif?height=100&width=50" alt="Phone Icon" class="img-fluid" style="max-width: 100px;">
+                        <div>
+                            <h3>Digital Marketing</h3>
+                            <p>Reach your target audience through effective digital marketing strategies.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center gap-4">
+                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGc2YndqZm9ncG1qdXN2ZDVjaWJydmlhendzb2FqaWw0amszc29xbyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/vJJWnBdIIRrOJRE7Pb/giphy.gif?height=100&width=50" alt="Phone Icon" class="img-fluid" style="max-width: 100px;">
+                        <div>
+                            <h3>Social Media</h3>
+                            <p>Engage with your audience across various social media platforms.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="wave-shape" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="text-center mb-5">What Client Say About Us</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <img src="client.png?height=80&width=80" alt="Client 1" class="testimonial-img mb-3">
+                        <p>"Outstanding results! Their lead generation strategies have transformed our business."</p>
+                        <h4 class="mt-3">Sarah Johnson</h4>
+                        <p class="text-muted">CEO, Tech Solutions</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <img src="client.png?height=80&width=80" alt="Client 2" class="testimonial-img mb-3">
+                        <p>"Professional team that delivers results consistently. Highly recommended!"</p>
+                        <h4 class="mt-3">Michael Chen</h4>
+                        <p class="text-muted">Marketing Director</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <img src="client.png?height=80&width=80" alt="Client 3" class="testimonial-img mb-3">
+                        <p>"The best investment we've made for our business growth strategy."</p>
+                        <h4 class="mt-3">Emily Brown</h4>
+                        <p class="text-muted">Founder, Digital First</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Tips and Tricks From Our Experts</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="blog-card">
+                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzVxa2d1YTN6MzBmd24xcXlzM2lqYmdhbGdzemMzMWJhZzg2dnpseSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/7VzgMsB6FLCilwS30v/giphy.gif?height=200&width=300" alt="Blog 1" class="blog-img">
+                        <div class="p-3">
+                            <h3 class="h5">Lead Generation Tips</h3>
+                            <p class="text-muted">Learn the best practices for generating quality leads...</p>
+                            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="blog-card">
+                        <img src="https://media.giphy.com/media/KX5nwoDX97AtPvKBF6/giphy.gif?cid=790b761135qkgua3z30fwn1qys3ijbgalgszc31bag86vzly&ep=v1_gifs_search&rid=giphy.gif&ct=g?height=200&width=300" alt="Blog 2" class="blog-img">
+                        <div class="p-3">
+                            <h3 class="h5">Digital Marketing Guide</h3>
+                            <p class="text-muted">Essential digital marketing strategies for 2024...</p>
+                            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="blog-card">
+                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzVxa2d1YTN6MzBmd24xcXlzM2lqYmdhbGdzemMzMWJhZzg2dnpseSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/doXBzUFJRxpaUbuaqz/giphy.gif?height=200&width=300" alt="Blog 3" class="blog-img">
+                        <div class="p-3">
+                            <h3 class="h5">Social Media Success</h3>
+                            <p class="text-muted">Maximize your social media presence...</p>
+                            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="blog-card">
+                        <img src="https://media.giphy.com/media/5k5vZwRFZR5aZeniqb/giphy.gif?cid=790b7611zlxriq7o9dafjhybjli3onofxpxpvndha58qeetp&ep=v1_gifs_search&rid=giphy.gif&ct=g?height=200&width=300" alt="Blog 4" class="blog-img">
+                        <div class="p-3">
+                            <h3 class="h5">Content Strategy</h3>
+                            <p class="text-muted">Create engaging content that converts...</p>
+                            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div>
+    <section class="contact-section wave-shape">
+        <div class="container text-center">
+            <h2 class="mb-4">Contact Us</h2>
+            <p class="mb-4">Ready to grow your business? Get in touch with our team today.</p>
+            <p></p>
+            <p></p>
+            <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+        </div>
+    </section>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoke and Spicy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, red, orange);
+            overflow: auto; /* Enables scrolling */
+            min-height: 100vh; /* Ensures full page height */
+            position: relative;
+        }
+
+        /* Smoke Effect */
+        .smoke-container {
+            position: absolute;
+            bottom: 0; /* Start from the bottom */
+            left: 0; /* Start from the left */
+            width: 100%;
+            height: 100vh; /* Full height for continuous effect */
+            pointer-events: none;
+            overflow: hidden; /* Prevents overflow issues */
+        }
+
+        .smoke {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            background: rgba(118, 117, 117, 0.854);
+            border-radius: 50%;
+            filter: blur(10px);
+            animation: rise 6s infinite ease-in-out;
+        }
+
+        /* Multiple Smoke Effects */
+        .smoke:nth-child(1) { animation-delay: 0s; left: 10%; }
+        .smoke:nth-child(2) { animation-delay: 1.5s; left: 30%; }
+        .smoke:nth-child(3) { animation-delay: 3s; left: 50%; }
+        .smoke:nth-child(4) { animation-delay: 4.5s; left: 70%; }
+
+        /* Animation for diagonal movement */
+        @keyframes rise {
+            0% { transform: translate(0, 0) scale(1); opacity: 1; }
+            50% { transform: translate(100px, -150px) scale(1.2); opacity: 0.7; }
+            100% { transform: translate(200px, -300px) scale(1.5); opacity: 0; }
+        }
+
+        /* Header */
+        #main-heading {
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            color: white;
+            font-size: 2rem;
+        }
+
+        /* Navigation Menu */
+        .nav-menu {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 80%;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .nav-menu a:hover {
+            color: #f4a261;
+        }
+
+        /* Sections */
+        .section {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Specialties List */
+        .specialties ol {
+            list-style-type: upper-roman;
+            padding-left: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* Menu Table */
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu-table th, .menu-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            font-size: 1.1rem;
+        }
+
+        .menu-table th {
+            background-color: #f4a261;
+            color: white;
+        }
+
+        .menu-item:hover {
+            background-color: #f4f4f4;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Smoke Effect -->
+    <div class="smoke-container">
+        <div class="smoke"></div>
+        <div class="smoke"></div>
+        <div class="smoke"></div>
+        <div class="smoke"></div>
+    </div>
+
+    <!-- Main Heading -->
+    <h1 id="main-heading">Smoke and Spicy</h1>
+
+    <!-- Navigation Menu -->
+    <div class="nav-menu">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact" target="_blank">Contact Us</a>
+    </div>
+
+    <!-- Specialties Section -->
+    <section class="section">
+        <h2>Our Specialties</h2>
+        <ol>
+            <li>Italian Cuisine</li>
+            <li>Indian Spices</li>
+            <li>Chinese Delicacies</li>
+            <li>Mexican Tacos</li>
+            <li>French Pastries</li>
+        </ol>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="section">
+        <h2>Our Menu</h2>
+        <table class="menu-table">
+            <tr>
+                <th>Dish Name</th>
+                <th>Price</th>
+                <th>Description</th>
+            </tr>
+            <tr class="menu-item">
+                <td>Margherita Pizza</td>
+                <td>$12</td>
+                <td>Classic pizza with fresh mozzarella and basil</td>
+            </tr>
+            <tr class="menu-item">
+                <td>Butter Chicken</td>
+                <td>$15</td>
+                <td>Rich and creamy Indian curry with tender chicken</td>
+            </tr>
+            <tr class="menu-item">
+                <td>Kung Pao Chicken</td>
+                <td>$14</td>
+                <td>Spicy and tangy chicken stir-fry with peanuts</td>
+            </tr>
+        </table>
+    </section>
+
+</body>
+</html>
