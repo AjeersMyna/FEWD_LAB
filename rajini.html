@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Bites</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styling for static navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Add padding to body to prevent content from being hidden under the fixed navbar */
+        body {
+            padding-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reservation">Reservation</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Welcome to Delicious Bites</h1>
+    </header>
+
+    <section id="home">
+        <h2>About Us</h2>
+        <p>At Delicious Bites, we serve a variety of exquisite dishes made from the freshest ingredients. Join us for an unforgettable dining experience.</p>
+    </section>
+
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <ul>
+            <li>
+                <h3>Margherita Pizza</h3>
+                <p>Classic pizza with fresh mozzarella and basil - $12</p>
+            </li>
+            <li>
+                <h3>Spaghetti Carbonara</h3>
+                <p>Traditional Italian pasta with creamy sauce and pancetta - $15</p>
+            </li>
+            <li>
+                <h3>Caesar Salad</h3>
+                <p>Crisp romaine lettuce with Caesar dressing and croutons - $10</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="reservation">
+        <h2>Book a Table</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required><br><br>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" required><br><br>
+
+            <button type="submit">Reserve</button>
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Address: 123 Foodie Lane, Flavor Town</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: contact@deliciousbites.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Delicious Bites. All rights reserved.</p>
+    </footer>
+</body>
+</html>

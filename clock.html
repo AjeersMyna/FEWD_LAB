@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Clock</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .clock {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .H, .M, .S {
+            position: absolute;
+            background-color: white;
+            transform-origin: bottom;
+        }
+        .H {
+            width: 6px;
+            height: 50px;
+            top: 50px;
+        }
+        .M {
+            width: 4px;
+            height: 70px;
+            top: 30px;
+        }
+        .S {
+            width: 2px;
+            height: 90px;
+            top: 10px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="H"></div>
+        <div class="M"></div>
+        <div class="S"></div>
+    </div>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours() % 12;
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+            
+            const hourDeg = (hours * 30) + (minutes * 0.5);
+            const minuteDeg = (minutes * 6) + (seconds * 0.1);
+            const secondDeg = seconds * 6;
+            
+            document.querySelector('.H').style.transform = `rotate(${hourDeg}deg)`;
+            document.querySelector('.M').style.transform = `rotate(${minuteDeg}deg)`;
+            document.querySelector('.S').style.transform = `rotate(${secondDeg}deg)`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
