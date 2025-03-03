@@ -12,28 +12,23 @@
             let email = document.getElementById("email").value.trim();
             let phone = document.getElementById("phone").value.trim();
             let rating = document.getElementById("rating").value;
-            let questions = document.getElementById("questions").value.trim();
             let nameRegex = /^[A-Za-z\s]+$/;
-            if (name && !nameRegex.test(name)) {
+            if (!name || !nameRegex.test(name)) {
                 alert("Please enter a valid name (only alphabets).");
                 return;
             }
             let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            if (email && !emailRegex.test(email)) {
+            if (!email || !emailRegex.test(email)) {
                 alert("Please enter a valid email address.");
                 return;
             }
             let phoneRegex = /^[0-9]+$/;
-            if (phone && !phoneRegex.test(phone)) {
+            if (!phone || !phoneRegex.test(phone)) {
                 alert("Please enter a valid phone number (only numbers).");
                 return;
             }
             if (!rating) {
                 alert("Please select a rating.");
-                return;
-            }
-            if (!questions) {
-                alert("Please provide a question or feedback.");
                 return;
             }
             document.getElementById("feedbackForm").style.display = "none";
@@ -46,13 +41,13 @@
         <h3 class="mb-3 text-success fw-bold">Feedback Form</h3>
         <form id="feedbackForm" onsubmit="validateForm(event)">
             <div class="mb-2">
-                <input type="text" id="name" class="form-control" placeholder="Name (Optional)">
+                <input type="text" id="name" class="form-control" placeholder="Name" required>
             </div>
             <div class="mb-2">
-                <input type="email" id="email" class="form-control" placeholder="Email (Optional)">
+                <input type="email" id="email" class="form-control" placeholder="Email" required>
             </div>
             <div class="mb-2">
-                <input type="tel" id="phone" class="form-control" placeholder="Phone (Optional)">
+                <input type="tel" id="phone" class="form-control" placeholder="Phone" required>
             </div>
             <div class="mb-2">
                 <select id="rating" class="form-select" required>
@@ -65,7 +60,7 @@
                 </select>
             </div>
             <div class="mb-2">
-                <textarea id="questions" class="form-control" rows="2" required placeholder="Questions about product/service"></textarea>
+                <textarea id="questions" class="form-control" rows="2" placeholder="Questions about product/service (Optional)"></textarea>
             </div>
             <button type="submit" class="btn btn-success w-100">Submit</button>
         </form>
