@@ -2,43 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About Us - E-Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us | A-Z Website</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS File -->
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">E-Shop</a>
+            <a class="navbar-brand" href="index.html">A-Z Website</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
                     <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                 </ul>
+                <button class="btn btn-outline-info ms-auto" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
             </div>
         </div>
     </nav>
+    <!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="email" id="loginEmail" class="form-control mb-3" placeholder="Email">
+                <input type="password" id="loginPassword" class="form-control mb-3" placeholder="Password">
+                <p id="loginMessage" class="text-success"></p>
+                <button class="btn btn-info w-100" onclick="validateLoginForm()">Login</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <header class="text-center py-5">
-        <h1>About Us</h1>
-        <p>Learn more about E-Shop and our journey.</p>
-    </header>
 
-    <div class="container">
-        <p>
-            Welcome to E-Shop! We are committed to providing high-quality products at affordable prices. 
-            Our store offers a variety of products ranging from electronics, fashion, and home essentials.
-        </p>
+    <!-- About Us Section -->
+    <div class="container my-5 text-center">
+        <h1 class="text-info">About Us</h1>
+        <p>Welcome to A-Z Website, your ultimate destination for quality products.</p>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <img src="client.png" class="img-fluid rounded" alt="About Us">
+            </div>
+            <div class="col-md-6">
+                <p>
+                    Our mission is to provide top-notch products with outstanding customer service. We partner with 
+                    reliable brands and ensure that every item in our store meets the highest quality standards.
+                </p>
+                <p>
+                    Our team is dedicated to providing a seamless shopping experience for you.
+                </p>
+            </div>
+        </div>
     </div>
 
-    <footer class="bg-dark text-white text-center py-3">
-        &copy; 2025 E-Shop. All rights reserved.
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 A-Z Website. All rights reserved.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

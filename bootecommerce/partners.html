@@ -3,14 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Partners - E-Shop</title>
+    <title>Our Partners - A-Z Website</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        /* Gradient Background */
+        body {
+            background: linear-gradient(135deg, #0a0a0a, #001f3f);
+            color: #fff;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .navbar-brand {
+            color: cyan !important;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        .nav-link {
+            color: white !important;
+            transition: 0.3s ease-in-out;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: cyan !important;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        header h1 {
+            font-size: 3rem;
+            color: cyan;
+        }
+
+        /* Partner Section */
+        .partner-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+            border: 1px solid cyan;
+        }
+        .partner-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px cyan;
+        }
+        .partner-card img {
+            max-width: 100px;
+            margin-bottom: 15px;
+        }
+        .partner-card h5 {
+            color: cyan;
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(0, 0, 0, 0.9);
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">E-Shop</a>
+            <a class="navbar-brand" href="index.html">A-Z Website</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -19,42 +84,53 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="partners.html">Partners</a></li>
                     <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
-                <button class="btn btn-custom ms-auto" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
             </div>
         </div>
     </nav>
 
-    <header class="text-center py-5">
-        <h1>Our Partners</h1>
-        <p>Meet the brands we work with</p>
+    <!-- Header -->
+    <header>
+        <h1>Our Trusted Partners</h1>
+        <p>We proudly collaborate with industry-leading brands.</p>
     </header>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 text-center">
-                <img src="client.png" alt="Partner 1">
-                <h4>Brand A</h4>
-                <p>Leading supplier of fashion products.</p>
+    <!-- Partners Section -->
+    <div class="container my-5">
+        <div class="row text-center">
+            <!-- Partner 1 -->
+            <div class="col-md-4">
+                <div class="partner-card p-4">
+                    <img src="client.png" alt="Partner 1">
+                    <h5>Partner 1: TechCorp</h5>
+                    <p>TechCorp is a leading innovator in artificial intelligence and cloud computing solutions, driving digital transformation worldwide.</p>
+                </div>
             </div>
-            <div class="col-md-4 text-center">
-                <img src="client.png" alt="Partner 2">
-                <h4>Brand B</h4>
-                <p>Innovators in tech accessories.</p>
+            <!-- Partner 2 -->
+            <div class="col-md-4">
+                <div class="partner-card p-4">
+                    <img src="client.png" alt="Partner 2">
+                    <h5>Partner 2: GreenEnergy</h5>
+                    <p>GreenEnergy is committed to sustainable energy solutions, specializing in solar and wind power projects across the globe.</p>
+                </div>
             </div>
-            <div class="col-md-4 text-center">
-                <img src="client.png" alt="Partner 3">
-                <h4>Brand C</h4>
-                <p>Premium home essentials supplier.</p>
+            <!-- Partner 3 -->
+            <div class="col-md-4">
+                <div class="partner-card p-4">
+                    <img src="client.png" alt="Partner 3">
+                    <h5>Partner 3: HealthFirst</h5>
+                    <p>HealthFirst is a global leader in pharmaceutical research and medical innovations, improving healthcare accessibility worldwide.</p>
+                </div>
             </div>
         </div>
     </div>
 
-    <footer class="bg-dark text-white text-center py-3">
-        &copy; 2025 E-Shop. All rights reserved.
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 A-Z Website. All rights reserved.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

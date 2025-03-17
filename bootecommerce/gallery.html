@@ -2,13 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gallery - E-Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery - A-Z Website</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        /* Background Theme */
+        body {
+            background: linear-gradient(135deg, #0a0a0a, #001f3f);
+            color: white;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+        }
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: cyan !important;
+        }
+        .nav-link {
+            color: white !important;
+            transition: 0.3s ease-in-out;
+        }
+        .nav-link:hover {
+            color: cyan !important;
+        }
+
+        /* Gallery Styling */
+        .gallery-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: 0.3s ease-in-out;
+            border: 2px solid cyan;
+        }
+        .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px cyan;
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(0, 0, 0, 0.9);
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Modal */
+        .modal-content {
+            background: #001f3f;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">E-Shop</a>
+            <a class="navbar-brand" href="index.html">A-Z Website</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -18,44 +73,95 @@
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
-                <button class="btn btn-custom ms-auto" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                <button class="btn btn-outline-info ms-auto" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
             </div>
         </div>
     </nav>
 
+    <!-- Header -->
     <header class="text-center py-5">
         <h1>Gallery</h1>
-        <p>Explore our product gallery</p>
+        <p>Explore our best moments.</p>
     </header>
 
-    <div class="container">
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="download1.jpg" class="d-block w-100" alt="Gallery 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="download3.jpg" class="d-block w-100" alt="Gallery 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="download2.jpg" class="d-block w-100" alt="Gallery 3">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </a>
+    <!-- Bootstrap Grid for Images -->
+    <div class="container text-center my-5">
+        <div class="row">
+            <div class="col-md-4 mb-4"><img src="download1.jpg" class="gallery-img"></div>
+            <div class="col-md-4 mb-4"><img src="download2.jpg" class="gallery-img"></div>
+            <div class="col-md-4 mb-4"><img src="download3.jpg" class="gallery-img"></div>
+            <div class="col-md-4 mb-4"><img src="download2.jpg" class="gallery-img"></div>
+            <div class="col-md-4 mb-4"><img src="download1.jpg" class="gallery-img"></div>
+            <div class="col-md-4 mb-4"><img src="download2.jpg" class="gallery-img"></div>
+            <div class="col-md-4 mb-4"><img src="download3.jpg" class="gallery-img"></div>
+            <div class="col-md-4 mb-4"><img src="download1.jpg" class="gallery-img"></div>
+            <div class="col-md-4 mb-4"><img src="download2.jpg" class="gallery-img"></div>
+            <div class="col-md-4 mb-4"><img src="download3.jpg" class="gallery-img"></div>
+            <div class="col-md-4 mb-4"><img src="download2.jpg" class="gallery-img"></div>
+            <div class="col-md-4 mb-4"><img src="download1.jpg" class="gallery-img"></div>
         </div>
     </div>
 
-    <footer class="bg-dark text-white text-center py-3">
-        &copy; 2025 E-Shop. All rights reserved.
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 A-Z Website. All rights reserved.</p>
     </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="email" id="loginEmail" class="form-control mb-3" placeholder="Email">
+                    <input type="password" id="loginPassword" class="form-control mb-3" placeholder="Password">
+                    <p id="loginMessage" class="text-success"></p>
+                    <button class="btn btn-info w-100" onclick="validateLoginForm()">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS for Login Validation -->
+    <script>
+        function validateLoginForm() {
+            let loginEmail = document.getElementById("loginEmail");
+            let loginPassword = document.getElementById("loginPassword");
+            let loginMessage = document.getElementById("loginMessage");
+            let valid = true;
+
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(loginEmail.value)) {
+                loginEmail.classList.add("is-invalid");
+                valid = false;
+            } else {
+                loginEmail.classList.remove("is-invalid");
+            }
+
+            if (loginPassword.value.length < 6) {
+                loginPassword.classList.add("is-invalid");
+                valid = false;
+            } else {
+                loginPassword.classList.remove("is-invalid");
+            }
+
+            if (valid) {
+                loginMessage.innerHTML = "Thank you for logging in!";
+                loginMessage.style.color = "lightgreen";
+                setTimeout(() => {
+                    loginMessage.innerHTML = "";
+                    var loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+                    loginModal.hide();
+                }, 2000);
+            }
+        }
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
